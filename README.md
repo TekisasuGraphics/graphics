@@ -35,8 +35,6 @@ of developers working on Aseprite.
 
 ## License
 
-This program is distributed under three different licenses:
-
 Source code and official releases/binaries are distributed under
 Aseprite's [End-User License Agreement for Aseprite (EULA)](EULA.txt). Please check
 that there are [modules/libraries in the source code](src/README.md) that
