@@ -236,7 +236,7 @@ if(ENABLE_ASEPRITE_EXE)
     ${INSTALL_OPT} DESTINATION bin)
 
   install(DIRECTORY ../data
-    DESTINATION share/aseprite)
+    DESTINATION share/Tekisasugraphics)
 endif()
 
 ######################################################################
