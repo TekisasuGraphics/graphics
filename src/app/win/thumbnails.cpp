@@ -20,12 +20,12 @@ namespace app { namespace win {
 
 using hkey = base::hkey;
 
-const char* kAsepriteThumbnailerDllName = "aseprite-thumbnailer.dll";
+const char* kThumbnailerDllName = "tekisasugraphics-thumbnailer.dll";
 
 std::string get_thumbnailer_dll()
 {
   std::string dll_path = base::join_path(base::get_file_path(base::get_app_path()),
-                                         kAsepriteThumbnailerDllName);
+                                         kThumbnailerDllName);
   if (!base::is_file(dll_path))
     return {}; // DLL doesn't exist
   return dll_path;

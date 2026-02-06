@@ -1,5 +1,7 @@
 # Credits
 
+Tekisasu Graphics is a soft fork of Aseprite created by [Tekisasu](https://dev.tekisasu.com).
+
 Aseprite is being developed and maintained currently by [Igara Studio](https://igara.com/).
 The active team of developers is:
 

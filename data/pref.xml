@@ -151,11 +151,11 @@
   <global>
     <section id="general">
       <option id="language" type="std::string" default="&quot;en&quot;" />
-      <option id="screen_scale" type="int" default="0" />
-      <option id="ui_scale" type="int" default="1" />
+      <option id="screen_scale" type="int" default="1" />
+      <option id="ui_scale" type="int" default="2" />
       <option id="gpu_acceleration" type="bool" default="false" />
       <option id="show_home" type="bool" default="true" />
-      <option id="visible_timeline" type="bool" default="false" />
+      <option id="visible_timeline" type="bool" default="true" />
       <option id="autoshow_timeline" type="bool" default="true" />
       <option id="rewind_on_stop" type="bool" default="false" />
       <option id="expand_menubar_on_mouseover" type="bool" default="false" />
@@ -236,7 +236,7 @@
       <option id="play_subtags" type="bool" default="true" />
     </section>
     <section id="theme" text="Theme">
-      <option id="selected" type="std::string" default="&quot;default&quot;" />
+      <option id="selected" type="std::string" default="&quot;default-dark&quot;" />
       <option id="font" type="std::string" />
       <option id="mini_font" type="std::string" />
     </section>
@@ -245,7 +245,7 @@
       <option id="set_cursor_fix" type="bool" default="true" />
     </section>
     <section id="experimental" text="Experimental">
-      <option id="multiple_windows" type="bool" default="false" />
+      <option id="multiple_windows" type="bool" default="true" />
       <option id="new_render_engine" type="bool" default="true" />
       <option id="new_blend" type="bool" default="true" />
       <option id="compose_groups" type="bool" default="false" />
@@ -605,7 +605,7 @@
       <option id="layer_index" type="int" default ="-1" />
       <option id="frame_tag" type="std::string" />
       <option id="split_layers" type="bool" default="false" />
-      <option id="split_tags" type="bool" default="false" />
+      <option id="split_tags" type="bool" default="true" />
       <option id="split_grid" type="bool" default="false" />
       <option id="list_layers" type="bool" default="true" />
       <option id="list_frame_tags" type="bool" default="true" />

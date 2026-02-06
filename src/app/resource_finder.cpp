@@ -88,13 +88,13 @@ void ResourceFinder::includeDataDir(const char* filename)
 #ifdef _WIN32
 
   std::snprintf(buf, sizeof(buf), "data/%s", filename);
-  includeHomeDir(buf); // %AppData%/Aseprite/data/filename
+  includeHomeDir(buf); // %AppData%/Tekisasu Graphics/data/filename
   includeBinDir(buf);  // $BINDIR/data/filename
 
 #elif __APPLE__
 
   std::snprintf(buf, sizeof(buf), "data/%s", filename);
-  includeUserDir(buf); // $HOME/Library/Application Support/Aseprite/data/filename
+  includeUserDir(buf); // $HOME/Library/Application Support/Tekisasu Graphics/data/filename
   includeBinDir(buf);  // $BINDIR/data/filename (outside the bundle)
 
   std::snprintf(buf, sizeof(buf), "../Resources/data/%s", filename);
@@ -102,16 +102,16 @@ void ResourceFinder::includeDataDir(const char* filename)
 
 #else
 
-  // $HOME/.config/aseprite/filename
-  std::snprintf(buf, sizeof(buf), "aseprite/data/%s", filename);
+  // $HOME/.config/Tekisasugraphics/filename
+  std::snprintf(buf, sizeof(buf), "Tekisasugraphics/data/%s", filename);
   includeHomeConfigDir(buf);
 
   // $BINDIR/data/filename
   std::snprintf(buf, sizeof(buf), "data/%s", filename);
   includeBinDir(buf);
 
-  // $BINDIR/../share/aseprite/data/filename (installed in /usr/ or /usr/local/)
-  std::snprintf(buf, sizeof(buf), "../share/aseprite/data/%s", filename);
+  // $BINDIR/../share/Tekisasugraphics/data/filename (installed in /usr/ or /usr/local/)
+  std::snprintf(buf, sizeof(buf), "../share/Tekisasugraphics/data/%s", filename);
   includeBinDir(buf);
 
 #endif
@@ -121,10 +121,10 @@ void ResourceFinder::includeHomeDir(const char* filename)
 {
 #ifdef _WIN32
 
-  // %AppData%/Aseprite/filename
+  // %AppData%/Tekisasu Graphics/filename
   wchar_t* env = _wgetenv(L"AppData");
   if (env) {
-    std::string path = base::join_path(base::to_utf8(env), "Aseprite");
+    std::string path = base::join_path(base::to_utf8(env), "Tekisasu Graphics");
     path = base::join_path(path, filename);
     addPath(path);
     m_default = path;
@@ -170,8 +170,8 @@ void ResourceFinder::includeUserDir(const char* filename)
 {
 #ifdef _WIN32
 
-  // $ASEPRITE_USER_FOLDER/filename
-  if (const wchar_t* env = _wgetenv(L"ASEPRITE_USER_FOLDER")) {
+  // $TEKISASU_USER_FOLDER/filename
+  if (const wchar_t* env = _wgetenv(L"TEKISASU_USER_FOLDER")) {
     addPath(base::join_path(base::to_utf8(env), filename));
   }
   else if (App::instance()->isPortable()) {
@@ -179,28 +179,28 @@ void ResourceFinder::includeUserDir(const char* filename)
     includeBinDir(filename);
   }
   else {
-    // %AppData%/Aseprite/filename
+    // %AppData%/Tekisasu Graphics/filename
     includeHomeDir(filename);
   }
 
 #else // Unix-like
 
-  // $ASEPRITE_USER_FOLDER/filename
-  if (const char* env = std::getenv("ASEPRITE_USER_FOLDER")) {
+  // $TEKISASU_USER_FOLDER/filename
+  if (const char* env = std::getenv("TEKISASU_USER_FOLDER")) {
     addPath(base::join_path(env, filename));
   }
   else {
   #ifdef __APPLE__
 
-    // $HOME/Library/Application Support/Aseprite/filename
+    // $HOME/Library/Application Support/Tekisasu Graphics/filename
     addPath(
       base::join_path(base::join_path(base::get_lib_app_support_path(), get_app_name()), filename)
         .c_str());
 
   #else // !__APPLE__
 
-    // $HOME/.config/aseprite/filename
-    includeHomeConfigDir((std::string("aseprite/") + filename).c_str());
+    // $HOME/.config/Tekisasugraphics/filename
+    includeHomeConfigDir((std::string("Tekisasugraphics/") + filename).c_str());
 
   #endif
   }

@@ -42,13 +42,13 @@ ConfigModule::ConfigModule()
   ResourceFinder rf;
   rf.includeUserDir("aseprite.ini");
 
-  // getFirstOrCreateDefault() will create the Aseprite directory
-  // inside the OS configuration folder (~/.config/aseprite/, etc.).
+  // getFirstOrCreateDefault() will create the Tekisasu Graphics directory
+  // inside the OS configuration folder (~/.config/Tekisasugraphics/, etc.).
   std::string fn = rf.getFirstOrCreateDefault();
 
 #ifdef __APPLE__
 
-  // On OS X we migrate from ~/.config/aseprite/* -> "~/Library/Application Support/Aseprite/*"
+  // On OS X we migrate from ~/.config/aseprite/* -> "~/Library/Application Support/Tekisasu Graphics/*"
   if (!base::is_file(fn)) {
     try {
       std::string new_dir = base::get_file_path(fn);
@@ -82,7 +82,7 @@ ConfigModule::ConfigModule()
 #elif !defined(_WIN32)
 
   // On Linux we migrate the old configuration file name
-  // (~/.asepriterc -> ~/.config/aseprite/aseprite.ini)
+  // (~/.asepriterc -> ~/.config/Tekisasugraphics/aseprite.ini)
   {
     ResourceFinder old_rf;
     old_rf.includeHomeDir(".asepriterc");

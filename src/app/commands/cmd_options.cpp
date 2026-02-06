@@ -487,7 +487,7 @@ public:
     if (dll_name.empty()) {
       winDisplayThumbnail()->setEnabled(false);
       winDisplayThumbnail()->setText(
-        Strings::options_thumbnailer_dll_not_found(win::kAsepriteThumbnailerDllName));
+        Strings::options_thumbnailer_dll_not_found(win::kThumbnailerDllName));
       winDisplayLittleIcon()->setVisible(false);
     }
     else {
