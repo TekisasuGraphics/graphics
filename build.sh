@@ -487,7 +487,7 @@ if [ ! -f "$active_build_dir/ninja.build" ] ; then
     fi
 fi
 echo "============================== BUILDING =============================="
-if ! cmake --build "$active_build_dir" -- aseprite | tee -a "$pwd/.build/log" ; then
+if ! cmake --build "$active_build_dir" -- Tekisasu-Graphics | tee -a "$pwd/.build/log" ; then
     echo "Error building Aseprite."
     exit 1
 fi
@@ -496,10 +496,10 @@ echo "================================ DONE ================================"
 if [ $is_win ] ; then exe=.exe ; else exe= ; fi
 echo "Run Aseprite with the following command:"
 echo ""
-echo "  $active_build_dir/bin/aseprite$exe"
+echo "  $active_build_dir/bin/Tekisasu-Graphics$exe"
 echo ""
 
 # Run Aseprite in --auto mode
 if [[ $auto && ! $norun ]] ; then
-    $active_build_dir/bin/aseprite$exe
+    $active_build_dir/bin/Tekisasu-Graphics$exe
 fi
