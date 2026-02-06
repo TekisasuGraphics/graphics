@@ -6,9 +6,9 @@
     <array>
         <dict>
             <key>UTTypeIdentifier</key>
-            <string>org.aseprite.Aseprite.sprite</string>
+            <string>org.tekisasu.TekisasuGraphics.sprite</string>
             <key>UTTypeDescription</key>
-            <string>Aseprite Sprite</string>
+            <string>Tekisasu Graphics Sprite</string>
             <key>UTTypeConformsTo</key>
             <array>
                 <string>public.image</string>
@@ -35,7 +35,7 @@
             <key>CFBundleTypeIconFile</key>
             <string>Document.icns</string>
             <key>CFBundleTypeName</key>
-            <string>Aseprite Sprite</string>
+            <string>Tekisasu Graphics Sprite</string>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>LSHandlerRank</key>
@@ -59,7 +59,7 @@
             <key>CFBundleTypeIconFile</key>
             <string>Document.icns</string>
             <key>CFBundleTypeName</key>
-            <string>Aseprite Sprite</string>
+            <string>Tekisasu Graphics Sprite</string>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
         </dict>
@@ -71,7 +71,7 @@
             <key>CFBundleTypeIconFile</key>
             <string>Extension.icns</string>
             <key>CFBundleTypeName</key>
-            <string>Aseprite Extension</string>
+            <string>Tekisasu Graphics Extension</string>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>LSHandlerRank</key>
@@ -79,13 +79,13 @@
         </dict>
     </array>
     <key>CFBundleDisplayName</key>
-    <string>Aseprite</string>
+    <string>Tekisasu Graphics</string>
     <key>CFBundleExecutable</key>
-    <string>aseprite</string>
+    <string>Tekisasu-Graphics</string>
     <key>CFBundleIdentifier</key>
-    <string>org.aseprite.Aseprite</string>
+    <string>org.tekisasu.TekisasuGraphics</string>
     <key>CFBundleName</key>
-    <string>Aseprite</string>
+    <string>Tekisasu Graphics</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleInfoDictionaryVersion</key>

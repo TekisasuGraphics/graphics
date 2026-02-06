@@ -105,6 +105,6 @@ jobs:
         if [[ "${{ runner.os }}" == "Linux" ]] ; then
           export XVFB=xvfb-run
         fi
-        export ASEPRITE=$PWD/build/bin/aseprite
+        export ASEPRITE=$PWD/build/bin/Tekisasu-Graphics
         cd tests
         $XVFB bash run-tests.sh
