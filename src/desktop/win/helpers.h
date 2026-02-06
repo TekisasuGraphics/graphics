@@ -20,7 +20,7 @@
 // This CLSID is defined by us, and can be used to create class factory for ThumbnailHandler
 // instances.
 #define THUMBNAILHANDLER_CLSID_STRING "{A5E9417E-6E7A-4B2D-85A4-84E114D7A960}"
-#define THUMBNAILHANDLER_NAME_STRING  "Aseprite Thumbnail Handler"
+#define THUMBNAILHANDLER_NAME_STRING  "Tekisasu Graphics Thumbnail Handler"
 
 // Flags for register_user_preferences() & get_user_preferences() functions
 #define THUMBNAILER_FLAG_ENABLED 1
