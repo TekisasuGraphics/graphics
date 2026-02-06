@@ -155,7 +155,7 @@
       <option id="ui_scale" type="int" default="2" />
       <option id="gpu_acceleration" type="bool" default="false" />
       <option id="show_home" type="bool" default="true" />
-      <option id="visible_timeline" type="bool" default="false" />
+      <option id="visible_timeline" type="bool" default="true" />
       <option id="autoshow_timeline" type="bool" default="true" />
       <option id="rewind_on_stop" type="bool" default="false" />
       <option id="expand_menubar_on_mouseover" type="bool" default="false" />
