@@ -27,7 +27,7 @@ struct ThumbnailsOption {
   bool operator!=(const ThumbnailsOption& other) const { return !operator==(other); }
 };
 
-extern const char* kAsepriteThumbnailerDllName;
+extern const char* kThumbnailerDllName;
 
 std::string get_thumbnailer_dll();
 
