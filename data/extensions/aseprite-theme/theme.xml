@@ -5,8 +5,8 @@
         <author name="Ilija Melentijevic" url="https://ilkke.net/"/>
     </authors>
     <fonts>
-        <font id="default" font="Aseprite"/>
-        <font id="mini" font="Aseprite Mini" mnemonics="off"/>
+        <font id="default" type="truetype" file="Inter_18pt-Regular.ttf"/>
+        <font id="mini" type="truetype" file="Inter_18pt-Regular.ttf" mnemonics="off"/>
     </fonts>
     <dimensions>
         <dim id="scrollbar_size" value="12"/>
