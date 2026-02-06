@@ -245,7 +245,7 @@
       <option id="set_cursor_fix" type="bool" default="true" />
     </section>
     <section id="experimental" text="Experimental">
-      <option id="multiple_windows" type="bool" default="false" />
+      <option id="multiple_windows" type="bool" default="true" />
       <option id="new_render_engine" type="bool" default="true" />
       <option id="new_blend" type="bool" default="true" />
       <option id="compose_groups" type="bool" default="false" />
