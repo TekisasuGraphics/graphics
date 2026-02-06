@@ -411,7 +411,7 @@ if(ENABLE_CLANG_TIDY)
 
   if(CLANG_TIDY_EXE)
     set_target_properties(app-lib PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}")
-    set_target_properties(aseprite PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}")
+    set_target_properties(Tekisasu-Graphics PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}")
     set_target_properties(cfg-lib PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}")
     set_target_properties(clip PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}")
     set_target_properties(dio-lib PROPERTIES CXX_CLANG_TIDY "${DO_CLANG_TIDY}")

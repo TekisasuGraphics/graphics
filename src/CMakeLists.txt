@@ -97,7 +97,7 @@ add_subdirectory(app)
 
 set(ORIGINAL_DATA_OUTPUT_DIR ${CMAKE_BINARY_DIR}/bin/data)
 if(ENABLE_ASEPRITE_EXE AND APPLE)
-  set(DATA_OUTPUT_DIR ${CMAKE_BINARY_DIR}/bin/Aseprite.app/Contents/Resources/data)
+  set(DATA_OUTPUT_DIR ${CMAKE_BINARY_DIR}/bin/Tekisasu-Graphics.app/Contents/Resources/data)
 else()
   set(DATA_OUTPUT_DIR ${ORIGINAL_DATA_OUTPUT_DIR})
 endif()
@@ -194,27 +194,27 @@ if(ENABLE_ASEPRITE_EXE)
     set(INSTALL_OPT BUNDLE)
   endif()
 
-  add_executable(aseprite ${BUNDLE_PARAM}
+  add_executable(Tekisasu-Graphics ${BUNDLE_PARAM}
     main/main.cpp
     ${main_resources})
   if(LAF_BACKEND STREQUAL "skia")
     if(WIN32)
-      set_target_properties(aseprite PROPERTIES WIN32_EXECUTABLE true)
+      set_target_properties(Tekisasu-Graphics PROPERTIES WIN32_EXECUTABLE true)
     endif()
   endif()
-  set_target_properties(aseprite PROPERTIES LINK_FLAGS "${LAF_BACKEND_LINK_FLAGS}")
+  set_target_properties(Tekisasu-Graphics PROPERTIES LINK_FLAGS "${LAF_BACKEND_LINK_FLAGS}")
   if(APPLE)
-    set_target_properties(aseprite PROPERTIES
+    set_target_properties(Tekisasu-Graphics PROPERTIES
       MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_LIST_DIR}/main/osx/Info.plist")
 
-    # As the output now is inside the Aseprite.app bundle, we generate
-    # a symlink to replace the old bin/aseprite binary and run the
+    # As the output now is inside the Tekisasu-Graphics.app bundle, we generate
+    # a symlink to replace the old bin/Tekisasu-Graphics binary and run the
     # binary inside the .app bundle.
     add_custom_command(
-      TARGET aseprite POST_BUILD
-      COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_BINARY_DIR}/bin/Aseprite.app/Contents/MacOS/aseprite" "${CMAKE_BINARY_DIR}/bin/aseprite")
+      TARGET Tekisasu-Graphics POST_BUILD
+      COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_BINARY_DIR}/bin/Tekisasu-Graphics.app/Contents/MacOS/Tekisasu-Graphics" "${CMAKE_BINARY_DIR}/bin/Tekisasu-Graphics")
 
-    # Create a bin/data link to bin/Aseprite.app/Contents/Resources/data
+    # Create a bin/data link to bin/Tekisasu-Graphics.app/Contents/Resources/data
     # so tests can load the data too (as tests aren't linked inside the
     # app bundle)
     if(IS_DIRECTORY "${ORIGINAL_DATA_OUTPUT_DIR}" AND
@@ -224,15 +224,15 @@ if(ENABLE_ASEPRITE_EXE)
     file(MAKE_DIRECTORY "${DATA_OUTPUT_DIR}")
     file(CREATE_LINK "${DATA_OUTPUT_DIR}" "${ORIGINAL_DATA_OUTPUT_DIR}" SYMBOLIC)
   endif()
-  target_link_libraries(aseprite app-lib)
-  add_dependencies(aseprite copy_data)
+  target_link_libraries(Tekisasu-Graphics app-lib)
+  add_dependencies(Tekisasu-Graphics copy_data)
 
   if(LAF_BACKEND_LINK_FLAGS)
-    set_target_properties(aseprite PROPERTIES LINK_FLAGS
+    set_target_properties(Tekisasu-Graphics PROPERTIES LINK_FLAGS
       ${LAF_BACKEND_LINK_FLAGS})
   endif()
 
-  install(TARGETS aseprite
+  install(TARGETS Tekisasu-Graphics
     ${INSTALL_OPT} DESTINATION bin)
 
   install(DIRECTORY ../data
