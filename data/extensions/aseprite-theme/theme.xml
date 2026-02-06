@@ -5,8 +5,8 @@
         <author name="Ilija Melentijevic" url="https://ilkke.net/"/>
     </authors>
     <fonts>
-        <font id="default" type="truetype" file="Inter_18pt-Regular.ttf" size="14"/>
-        <font id="mini" type="truetype" file="Inter_18pt-Regular.ttf" size="12" mnemonics="off"/>
+        <font id="default" type="truetype" file="Inter_18pt-Regular.ttf" size="7"/>
+        <font id="mini" type="truetype" file="Inter_18pt-Regular.ttf" size="6" mnemonics="off"/>
     </fonts>
     <dimensions>
         <dim id="scrollbar_size" value="12"/>
