@@ -8,7 +8,7 @@
 #include "generated_version.h" /* It defines the VERSION macro */
 
 #define PACKAGE   "Tekisasu Graphics"
-#define COPYRIGHT "Copyright (C) 2001-2025 Igara Studio S.A."
+#define COPYRIGHT "Copyright (C) 2021-present Tekisasu, Copyright (C) 2001-2025 Igara Studio S.A."
 
 #if defined(_WIN32) || defined(__APPLE__)
   #define HTTP "https"
@@ -19,11 +19,11 @@
 #ifdef CUSTOM_WEBSITE_URL
   #define WEBSITE CUSTOM_WEBSITE_URL /* To test web server */
 #else
-  #define WEBSITE HTTP "://www.aseprite.org/"
+  #define WEBSITE HTTP "://dev.tekisasu.com/"
 #endif
 #define WEBSITE_DOWNLOAD     WEBSITE "download/"
 #define WEBSITE_CONTRIBUTORS WEBSITE "contributors/"
-#define WEBSITE_NEWS_RSS     HTTP "://blog.aseprite.org/rss"
+#define WEBSITE_NEWS_RSS     HTTP "://dev.tekisasu.com/rss"
 #define WEBSITE_UPDATE       WEBSITE "update/?xml=1"
 
 const char* get_app_name()
