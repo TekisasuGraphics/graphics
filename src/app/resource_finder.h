@@ -49,7 +49,7 @@ public:
 
   // Tries to add the given filename in these locations:
   // For Windows:
-  // - If ASEPRITE_USER_FOLDER environment variable is defined, it
+  // - If TEKISASU_USER_FOLDER environment variable is defined, it
   //   should point the folder where the "user dir" is (it's useful
   //   for testing purposes to test with an empty preferences
   //   folder)
@@ -58,7 +58,7 @@ public:
   // - If the app is installed, the filename will be inside
   //   %AppData% location
   // For Unix-like platforms:
-  // - The filename will be in $HOME/.config/aseprite/
+  // - The filename will be in $HOME/.config/Tekisasugraphics/
   void includeUserDir(const char* filename);
 
   void includeDesktopDir(const char* filename);

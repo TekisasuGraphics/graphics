@@ -40,7 +40,7 @@ else
     PWDARG=
 fi
 echo Temp dir: $t
-export ASEPRITE_USER_FOLDER=$t
+export TEKISASU_USER_FOLDER=$t
 
 if [[ "$filter" == "" ]] || [[ "console" =~ $filter ]]; then
     echo ----------------------------------------------------------------------
