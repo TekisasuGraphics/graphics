@@ -79,13 +79,13 @@
         </dict>
     </array>
     <key>CFBundleDisplayName</key>
-    <string>Aseprite</string>
+    <string>Tekisasu Graphics</string>
     <key>CFBundleExecutable</key>
-    <string>aseprite</string>
+    <string>Tekisasu-Graphics</string>
     <key>CFBundleIdentifier</key>
     <string>org.aseprite.Aseprite</string>
     <key>CFBundleName</key>
-    <string>Aseprite</string>
+    <string>Tekisasu Graphics</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleInfoDictionaryVersion</key>
