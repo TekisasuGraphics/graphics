@@ -9,5 +9,5 @@ Exec=Tekisasu-Graphics %U
 TryExec=Tekisasu-Graphics
 Terminal=false
 StartupNotify=false
-StartupWMClass=Tekisasu Graphics
+StartupWMClass=TekisasuGraphics
 MimeType=image/bmp;image/gif;image/jpeg;image/png;image/x-pcx;image/x-tga;image/vnd.microsoft.icon;video/x-flic;image/webp;image/x-aseprite;
