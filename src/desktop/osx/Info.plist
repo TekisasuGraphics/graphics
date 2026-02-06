@@ -5,7 +5,7 @@
         <key>CFBundleExecutable</key>
         <string>AsepriteThumbnailer</string>
         <key>CFBundleIdentifier</key>
-        <string>org.aseprite.AsepriteThumbnailer</string>
+        <string>org.tekisasu.TekisasuGraphicsThumbnailer</string>
         <key>CFBundleName</key>
         <string>AsepriteThumbnailer</string>
         <key>CFBundleShortVersionString</key>
@@ -20,7 +20,7 @@
                 <dict>
                         <key>QLSupportedContentTypes</key>
                         <array>
-                            <string>org.aseprite.Aseprite.sprite</string>
+                            <string>org.tekisasu.TekisasuGraphics.sprite</string>
                         </array>
                         <key>QLThumbnailMinimumDimension</key>
                         <integer>32</integer>

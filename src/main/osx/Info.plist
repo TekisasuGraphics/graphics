@@ -6,7 +6,7 @@
     <array>
         <dict>
             <key>UTTypeIdentifier</key>
-            <string>org.aseprite.Aseprite.sprite</string>
+            <string>org.tekisasu.TekisasuGraphics.sprite</string>
             <key>UTTypeDescription</key>
             <string>Aseprite Sprite</string>
             <key>UTTypeConformsTo</key>
@@ -83,7 +83,7 @@
     <key>CFBundleExecutable</key>
     <string>Tekisasu-Graphics</string>
     <key>CFBundleIdentifier</key>
-    <string>org.aseprite.Aseprite</string>
+    <string>org.tekisasu.TekisasuGraphics</string>
     <key>CFBundleName</key>
     <string>Tekisasu Graphics</string>
     <key>CFBundlePackageType</key>
