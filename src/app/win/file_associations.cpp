@@ -30,7 +30,7 @@ static void configure_shell_open(hkey& k)
 
   hkey ddeexec = open.create("ddeexec");
   ddeexec.string("", "[open(\"%1\")]");
-  ddeexec.create("application").string("", "Aseprite");
+  ddeexec.create("application").string("", "Tekisasu Graphics");
   ddeexec.create("topic").string("", "system");
 }
 
@@ -71,7 +71,7 @@ void add_aseprite_to_open_with_file_type(const std::string& extension)
 
     // HKEY_CLASSES_ROOT\IgaraStudio.Aseprite
     k = hkcr.create("IgaraStudio.Aseprite");
-    k.create("Application").string("ApplicationName", "Aseprite (running instance)");
+    k.create("Application").string("ApplicationName", "Tekisasu Graphics (running instance)");
     configure_shell_open(k);
 
     notify_shell_about_association_change_regen_thumbnails();

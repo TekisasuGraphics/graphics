@@ -20,7 +20,7 @@ namespace app { namespace win {
 
 using hkey = base::hkey;
 
-const char* kAsepriteThumbnailerDllName = "aseprite-thumbnailer.dll";
+const char* kAsepriteThumbnailerDllName = "tekisasugraphics-thumbnailer.dll";
 
 std::string get_thumbnailer_dll()
 {
